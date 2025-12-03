@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saga Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">r
+        <div class="logo">Sagar Portfolio</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#hackathons">Hackathons</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <span class="menu-btn" onclick="toggleMenu()">☰</span>
+    </nav>
+
+    <!-- TOP RIGHT ICONS CARD -->
+    <div class="top-icons-card animate">
+        <a href="https://github.com/sagr12004" target="_blank">
+            <i class="fab fa-github fa-2x"></i>
+            <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/sagarssavadatti2004" target="_blank">
+            <i class="fab fa-linkedin fa-2x"></i>
+            <span>LinkedIn</span>
+        </a>
+    </div>
+
+    <!-- HOME / INTRO -->
+     <div class="profile-pic">
+           <center> <img src="images/profile.jpg" alt="Profile Picture"></center>
+    </div>
+     
+    <section id="home" class="section card animate">
+       <center> <h1 class="intro-text">Hello, I’m Sagar</h1>
+        <p>Welcome to my portfolio!<br> I’m passionate about technology, creativity, and building meaningful digital experiences.</p></center>
+    </section>
+    
+
+    <!-- ABOUT -->
+    <section id="about" class="section card animate">
+        <div class="section-card-header">About Me</div>
+        <p>I’m Sagar, an Information Science and Engineering student with a strong passion for technology, creativity, and problem-solving. I enjoy exploring different areas of software development, understanding how systems work, and learning the principles behind clean, user-centric digital experiences.
+
+<br>I’m driven by curiosity and a desire to build things that are simple, meaningful, and impactful. Whether it’s understanding new concepts, experimenting with ideas, or improving my technical foundation, I love challenging myself to grow every day.
+
+<br>I believe in continuous learning, collaboration, and staying open to new opportunities that help me expand my skills and perspective. My goal is to become a well-rounded developer who contributes positively to the tech community and takes pride in building solutions that truly make a difference.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section card animate">
+        <div class="section-card-header">Skills</div>
+        <div class="skills-container">
+            <div class="skill-box animate">Communication Skills</div>
+            <div class="skill-box animate">Frontend Development</div>
+            <div class="skill-box animate">Backend Development</div>
+            <div class="skill-box animate">Power BI</div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section card animate">
+        <div class="section-card-header">Certifications</div>
+        <div class="cert-container">
+            <div class="cert-box animate">Python | Infosys Springboard 2025</div>
+            <div class="cert-box animate">MATLAB Beginners | Infosys Springboard 2025</div>
+            <div class="cert-box animate">DSA | Infosys Springboard 2025</div>
+            <div class="cert-box animate">C Programming | Infosys Springboard 2025</div>
+            <div class="cert-box animate">Build Your Own Static Website | NxtWave 2025</div>
+            <div class="cert-box animate">Build Your Own Responsive Website (Flexbox & Bootstrap) | NxtWave 2025</div>
+            <div class="cert-box animate">Full Website using WordPress | Coursera 2025</div>
+            <div class="cert-box animate">Lead Generation Chatbot | Coursera 2025</div>
+            <div class="cert-box animate">Introduction to Electronics | Infosys Springboard 2025</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section card animate">
+        <div class="section-card-header">Projects</div>
+        
+        <div class="projects-container">
+            <div class="project-box animate">
+                
+                <h3>AdaptiControl</h3>
+                <img src="images/adapti.jpg" alt="AdaptiControl">
+                <p>An accessibility-focused system developed to enable computer control via alternative input methods. Built during a 12-hour hackathon.</p>
+                <a href="https://github.com/sagr12004/AdaptiControl" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="project-box animate">
+                <h3>Portfolio Website</h3>
+                <img src="images/portfolio.jpg" alt="Portfolio Website">
+                <p>This portfolio website showcases my skills, certifications, projects, and achievements. Built with HTML, CSS, and JS.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HACKATHONS -->
+    <section id="hackathons" class="section card animate">
+        <div class="section-card-header">Hackathons & Achievements</div>
+        <ul>
+           <h3> <li>AdaptiControl – 12-hour National Level Hackathon, DSATM, December 2024</li><br>
+            <li>Algo Rave Hackathon – 8-hour Hackathon, DSATM, April 2025</li><br>
+            <li>Coding Contest Participation – 8/11/2024</li></h3>
+        </ul>
+    </section>
+
+    <!-- SPLINE BACKGROUND -->
+<div class="spline-container">
+    <iframe 
+        src="https://my.spline.design/genkubgreetingrobot-JtrMV2n6CZVd4uBgFW7Yk3B0/"
+        frameborder="0">
+    </iframe>
+</div>
+
+<div class="spline-overlay"></div>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section card contact-card animate">
+        <div class="section-card-header">Contact Me</div>
+        <p><center><strong>Email:</strong> <a href="mailto:sagarsssavadatti2004@gmail.com">sagarsssavadatti2004@gmail.com</a></center></p>
+        <p><center><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sagarssavadatti2004" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/sagarssavadatti2004</center></a></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

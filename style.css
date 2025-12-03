@@ -1,0 +1,413 @@
+/* =================== RESET & FONT =================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background: linear-gradient(-45deg,#6a00ff,#00d4ff,#ff6ec7,#00ffe0);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #00f5ff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =================== UTILITY CLASSES =================== */
+/* Replaces the <center> tag */
+.text-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =================== NAVBAR =================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
+    border-radius: 0 0 20px 20px;
+    z-index: 100;
+}
+
+/* Logo / Portfolio Name */
+.navbar .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #ff6ec7;
+}
+
+/* Navbar links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none; /* Removed default bullets */
+}
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #00f5ff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.nav-links li a:hover {
+    color: #ff3e99;
+    transform: scale(1.1);
+}
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #00f5ff;
+}
+
+/* =================== TOP RIGHT ICONS CARD =================== */
+.top-icons-card {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.6);
+    padding: 15px 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    z-index: 90;
+}
+.top-icons-card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #00ffe0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.top-icons-card a:hover {
+    color: #ff6ec7;
+    transform: scale(1.05);
+}
+.top-icons-card span {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+/* =================== PROFILE PICTURE =================== */
+.profile-pic {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.profile-pic img {
+    width: 250px; /* Adjusted slightly for better proportions */
+    height: 250px;
+    object-fit: cover; /* Ensures image doesn't stretch */
+    border-radius: 50%;
+    border: 4px solid rgb(114, 9, 233);
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(114, 9, 233, 0.6);
+}
+
+/* =================== SECTIONS =================== */
+.section.card {
+    background: rgba(0,0,0,0.5);
+    padding: 30px 40px;
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 900px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3),0 0 30px rgba(106,0,255,0.7);
+    transition: 0.3s;
+    /* Backdrop filter for glass morphism */
+    backdrop-filter: blur(10px);
+}
+.section.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 50px rgba(255,110,199,0.9),0 0 60px rgba(0,212,255,0.9);
+}
+
+/* Slightly smaller contact card */
+.contact-card {
+    padding: 28px 38px;
+}
+
+/* =================== HEADINGS =================== */
+h1,h2,h3 {
+    background: linear-gradient(90deg,#ff3e99,#00d4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+/* =================== PARAGRAPHS & LINKS =================== */
+p, li {
+    color: #00f5ff;
+    text-shadow: 0 0 5px rgba(0,245,255,0.5);
+    line-height: 1.6;
+}
+ul {
+    list-style: none; /* Remove default bullets for hackathon list */
+}
+a {
+    color: #ff6ec7;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+a:hover {
+    color: #00ffe0;
+    text-shadow: 0 0 8px #00ffe0;
+}
+
+/* =================== BUTTONS =================== */
+.btn {
+    background: linear-gradient(135deg,#ff6ec7,#00ffe0);
+    color: #222 !important; /* Force text color for button */
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 12px 28px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255,110,199,0.6), 0 0 20px rgba(0,255,224,0.6);
+    display: inline-block;
+}
+.btn:hover {
+    background: linear-gradient(135deg,#ff3e99,#00d4ff);
+    box-shadow: 0 0 25px rgba(255,110,199,0.9),0 0 30px rgba(0,212,255,0.9);
+    text-shadow: none;
+}
+
+/* =================== SKILLS =================== */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.skill-box {
+    background: linear-gradient(135deg,#6a00ff,#00d4ff);
+    padding: 20px 25px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3),0 0 30px rgba(106,0,255,0.7);
+    transition: 0.3s;
+    cursor: pointer;
+    color: #fff;
+}
+.skill-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgba(106,0,255,0.9),0 0 60px rgba(0,212,255,0.9);
+}
+
+/* =================== CERTIFICATIONS & PROJECTS =================== */
+.cert-container, .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.cert-box {
+    background: linear-gradient(135deg,#ff6ec7,#00d4ff);
+    padding: 15px 20px;
+    border-radius: 12px;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+.cert-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 50px rgba(255,110,199,0.9);
+}
+
+/* Projects Layout */
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+.project-box {
+    background: linear-gradient(135deg,#ff6ec7,#00d4ff);
+    padding: 20px;
+    border-radius: 12px;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; Removed to let content flow naturally */
+    align-items: center; /* Centers content inside the box */
+}
+.project-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 50px rgba(255,110,199,0.9);
+}
+
+/* FIX: Image sizing for projects */
+.project-box img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop image to fit without distortion */
+    border-radius: 8px;
+    margin: 15px 0;
+    background-color: #000; /* Fallback color */
+}
+
+.project-box h3 {
+    margin-bottom: 5px;
+    color: #fff;
+    -webkit-text-fill-color: #fff; /* Override gradient text for card headers if needed */
+}
+
+.project-box .btn {
+    margin-top: auto; /* Pushes button to bottom if height varies */
+    align-self: center;
+}
+
+/* =================== SECTION HEADERS IN CARDS =================== */
+.section-card-header {
+    background: linear-gradient(135deg,#6a00ff,#00d4ff);
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+/* =================== FOOTER =================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+    color: #00ffe0;
+    border-radius: 20px 20px 0 0;
+}
+
+/* =================== ANIMATIONS =================== */
+.animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+/* =================== INTRO / TYPING =================== */
+@font-face {
+    font-family: 'Algerian';
+    src: local('Algerian'), url('Algerian.ttf') format('truetype');
+}
+.intro-text {
+    font-family: 'Algerian', sans-serif; /* Fallback to sans-serif if Algerian isn't available */
+    font-size: 3rem;
+    background: linear-gradient(90deg,#ff3e99,#00d4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #00ffe0;
+    width: 17ch;
+    animation: typing 2.0s steps(17, end), blinkCursor .75s step-end infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 17ch; }
+}
+
+@keyframes blinkCursor {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #00ffe0; }
+}
+
+
+/* =================== RESPONSIVE =================== */
+@media(max-width:768px) {
+    .nav-links {
+        position: fixed; /* Changed to fixed for better mobile menu */
+        top: 0;
+        right: -250px;
+        height: 100vh;
+        background: rgba(0,0,0,0.9);
+        flex-direction: column;
+        padding-top: 80px;
+        width: 250px;
+        transition: 0.3s;
+        z-index: 99;
+    }
+    .menu-btn {
+        display: block;
+        z-index: 101; /* Ensure button is above menu */
+    }
+    
+    .profile-pic img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .intro-text {
+        font-size: 1.8rem; /* Smaller font for mobile */
+        width: auto;
+        white-space: normal;
+        border-right: none;
+        animation: none; /* Disable typing animation on small screens if it breaks layout */
+    }
+
+    .project-box {
+        width: 100%;
+    }
+}
+
+/* --- SPLINE BACKGROUND --- */
+.spline-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    overflow: hidden;
+}
+
+.spline-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+}
+
+/* Dark overlay for readability */
+.spline-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: -5;
+}
