@@ -1,137 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sagar Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sagar S S — Portfolio</title>
+  <meta name="description" content="Portfolio of Sagar S — Information Science & Engineering student. Projects: accessibility tools, web development, data visualization." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Sagar S S</a>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo">Sagar Portfolio</div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#hackathons">Hackathons</a></li>
-            <li><a href="#contact">Contact</a></li>
+      <button id="menuToggle" aria-expanded="false" aria-controls="primaryNav" class="menu-toggle ripple-btn" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" role="navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link glow-trail ripple-btn" href="#home">Home</a></li>
+          <li><a class="nav-link glow-trail ripple-btn" href="#about">About</a></li>
+          <li><a class="nav-link glow-trail ripple-btn" href="#skills">Skills</a></li>
+          <li><a class="nav-link glow-trail ripple-btn" href="#certifications">Certifications</a></li>
+          <li><a class="nav-link glow-trail ripple-btn" href="#projects">Projects</a></li>
+          <li><a class="nav-link glow-trail ripple-btn" href="#hackathons">Hackathons</a></li>
+          <li><a class="nav-link glow-trail ripple-btn" href="#contact">Contact</a></li>
         </ul>
-        <span class="menu-btn" onclick="toggleMenu()">☰</span>
-    </nav>
+      </nav>
 
-    <!-- TOP RIGHT ICONS CARD -->
-    <div class="top-icons-card animate">
-        <a href="https://github.com/sagr12004" target="_blank">
-            <i class="fab fa-github fa-2x"></i>
-            <span>GitHub</span>
-        </a>
-        <a href="https://www.linkedin.com/in/sagarssavadatti2004" target="_blank">
-            <i class="fab fa-linkedin fa-2x"></i>
-            <span>LinkedIn</span>
-        </a>
+      <div class="social-quick">
+        <a href="https://github.com/sagr12004" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sagarssavadatti2004" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
     </div>
+  </header>
 
-    <!-- HOME / INTRO -->
-     <div class="profile-pic">
-           <center> <img src="images/profile.jpg" alt="Profile Picture"></center>
-    </div>
-     
-    <section id="home" class="section card animate">
-       <center> <h1 class="intro-text">Hello, I’m Sagar</h1>
-        <p>Welcome to my portfolio!<br> I’m passionate about technology, creativity, and building meaningful digital experiences.</p></center>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero section">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1 class="hi">Hi — I’m <span class="accent">Sagar</span></h1>
+          <p class="lead">
+            <span id="typed" aria-live="polite"></span><span class="cursor" aria-hidden="true">|</span>
+          </p>
+
+          <div class="hero-ctas">
+            <a class="btn primary glow-trail ripple-btn" href="#projects">View Projects</a>
+            <a class="btn outline glow-trail ripple-btn" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="profile-wrap neon">
+            <img src="images/profile.jpg" alt="Portrait of Sagar" class="profile-photo">
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" aria-hidden="true"></div>
     </section>
-    
 
     <!-- ABOUT -->
-    <section id="about" class="section card animate">
-        <div class="section-card-header">About Me</div>
-        <p>I’m Sagar, an Information Science and Engineering student with a strong passion for technology, creativity, and problem-solving. I enjoy exploring different areas of software development, understanding how systems work, and learning the principles behind clean, user-centric digital experiences.
-
-<br>I’m driven by curiosity and a desire to build things that are simple, meaningful, and impactful. Whether it’s understanding new concepts, experimenting with ideas, or improving my technical foundation, I love challenging myself to grow every day.
-
-<br>I believe in continuous learning, collaboration, and staying open to new opportunities that help me expand my skills and perspective. My goal is to become a well-rounded developer who contributes positively to the tech community and takes pride in building solutions that truly make a difference.</p>
+    <section id="about" class="section container">
+      <h2 class="section-title">About</h2>
+      <div class="card animate glow-trail">
+        <p>I’m Sagar — an Information Science & Engineering student passionate about building simple, inclusive digital products. I focus on frontend development, accessibility-first design, and projects that make technology more usable for everyone.</p>
+        <p>I love learning — whether that’s new libraries, algorithms, or experimenting during hackathons. Currently exploring advanced JavaScript, DSA, and Power BI for data storytelling.</p>
+      </div>
+      <div class="divider" aria-hidden="true"></div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="section card animate">
-        <div class="section-card-header">Skills</div>
-        <div class="skills-container">
-            <div class="skill-box animate">Communication Skills</div>
-            <div class="skill-box animate">Frontend Development</div>
-            <div class="skill-box animate">Backend Development</div>
-            <div class="skill-box animate">Power BI</div>
-        </div>
+    <section id="skills" class="section container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill glow-trail ripple-btn">Frontend Development (HTML/CSS/JS)</div>
+        <div class="skill glow-trail ripple-btn">Backend Basics (Node/Express)</div>
+        <div class="skill glow-trail ripple-btn">Data Structures & Algorithms</div>
+        <div class="skill glow-trail ripple-btn">Accessibility & Assistive Tech</div>
+        <div class="skill glow-trail ripple-btn">Power BI & Data Visualization</div>
+        <div class="skill glow-trail ripple-btn">Communication & Teamwork</div>
+      </div>
+      <div class="divider" aria-hidden="true"></div>
     </section>
 
     <!-- CERTIFICATIONS -->
-    <section id="certifications" class="section card animate">
-        <div class="section-card-header">Certifications</div>
-        <div class="cert-container">
-            <div class="cert-box animate">Python | Infosys Springboard 2025</div>
-            <div class="cert-box animate">MATLAB Beginners | Infosys Springboard 2025</div>
-            <div class="cert-box animate">DSA | Infosys Springboard 2025</div>
-            <div class="cert-box animate">C Programming | Infosys Springboard 2025</div>
-            <div class="cert-box animate">Build Your Own Static Website | NxtWave 2025</div>
-            <div class="cert-box animate">Build Your Own Responsive Website (Flexbox & Bootstrap) | NxtWave 2025</div>
-            <div class="cert-box animate">Full Website using WordPress | Coursera 2025</div>
-            <div class="cert-box animate">Lead Generation Chatbot | Coursera 2025</div>
-            <div class="cert-box animate">Introduction to Electronics | Infosys Springboard 2025</div>
-        </div>
+    <section id="certifications" class="section container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="cards-list cert-grid">
+        <article class="card small glow-trail ripple-btn">Python — Infosys Springboard (2025)</article>
+        <article class="card small glow-trail ripple-btn">MATLAB Beginners — Infosys Springboard (2025)</article>
+        <article class="card small glow-trail ripple-btn">DSA — Infosys Springboard (2025)</article>
+        <article class="card small glow-trail ripple-btn">C Programming — Infosys Springboard (2025)</article>
+        <article class="card small glow-trail ripple-btn">Build Your Own Static Website — NxtWave (2025)</article>
+        <article class="card small glow-trail ripple-btn">Build Your Own Responsive Website (Flexbox & Bootstrap) — NxtWave (2025)</article>
+        <article class="card small glow-trail ripple-btn">Full Website using WordPress — Coursera (2025)</article>
+        <article class="card small glow-trail ripple-btn">Lead Generation Chatbot — Coursera (2025)</article>
+        <article class="card small glow-trail ripple-btn">Introduction to Electronics — Infosys Springboard (2025)</article>
+      </div>
+      <div class="divider" aria-hidden="true"></div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section card animate">
-        <div class="section-card-header">Projects</div>
-        
-        <div class="projects-container">
-            <div class="project-box animate">
-                
-                <h3>AdaptiControl</h3>
-                <img src="images/adapti.jpg" alt="AdaptiControl">
-                <p>An accessibility-focused system developed to enable computer control via alternative input methods. Built during a 12-hour hackathon.</p>
-                <a href="https://github.com/sagr12004/AdaptiControl" target="_blank" class="btn">View on GitHub</a>
+    <section id="projects" class="section container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card neon glow-trail">
+          <img src="images/adapti.jpg" alt="AdaptiControl screenshot" class="project-thumb">
+          <div class="project-body">
+            <h3>AdaptiControl</h3>
+            <p>An accessibility-focused system that enables computer control via alternative input methods — built during a 12-hour hackathon.</p>
+            <div class="project-actions">
+              <a class="btn project-btn ripple-btn glow-trail" href="https://github.com/sagr12004/AdaptiControl" target="_blank" rel="noopener">View on GitHub</a>
             </div>
-            <div class="project-box animate">
-                <h3>Portfolio Website</h3>
-                <img src="images/portfolio.jpg" alt="Portfolio Website">
-                <p>This portfolio website showcases my skills, certifications, projects, and achievements. Built with HTML, CSS, and JS.</p>
+          </div>
+        </article>
+
+        <article class="project-card neon glow-trail">
+          <img src="images/portfolio.jpg" alt="Portfolio screenshot" class="project-thumb">
+          <div class="project-body">
+            <h3>Portfolio Website</h3>
+            <p>This site — rebuilt focusing on accessibility, responsive layout, and semantic markup.</p>
+            <div class="project-actions">
+              <a class="btn project-btn ripple-btn glow-trail" href="https://sagr12004.github.io/Portfolio-Website/" target="_blank" rel="noopener">View on GitHub</a>
             </div>
-        </div>
+          </div>
+        </article>
+      </div>
+      <div class="divider" aria-hidden="true"></div>
     </section>
 
-    <!-- HACKATHONS -->
-    <section id="hackathons" class="section card animate">
-        <div class="section-card-header">Hackathons & Achievements</div>
-        <ul>
-           <h3> <li>AdaptiControl – 12-hour National Level Hackathon, DSATM, December 2024</li><br>
-            <li>Algo Rave Hackathon – 8-hour Hackathon, DSATM, April 2025</li><br>
-            <li>Coding Contest Participation – 8/11/2024</li></h3>
+    <!-- HACKATHONS & ACHIEVEMENTS -->
+    <section id="hackathons" class="section container">
+      <h2 class="section-title">Hackathons & Achievements</h2>
+      <div class="card animate glow-trail">
+        <ul class="achievements">
+          <li><strong>AdaptiControl</strong> — 12-hour National Hackathon (DSATM), December 2024</li>
+          <li><strong>Algo Rave</strong> — 8-hour Hackathon (DSATM), April 2025</li>
+          <li>Coding contest participation — November 2024</li>
         </ul>
+      </div>
+      <div class="divider" aria-hidden="true"></div>
     </section>
-
-    <!-- SPLINE BACKGROUND -->
-<div class="spline-container">
-    <iframe 
-        src="https://my.spline.design/genkubgreetingrobot-JtrMV2n6CZVd4uBgFW7Yk3B0/"
-        frameborder="0">
-    </iframe>
-</div>
-
-<div class="spline-overlay"></div>
-
 
     <!-- CONTACT -->
-    <section id="contact" class="section card contact-card animate">
-        <div class="section-card-header">Contact Me</div>
-        <p><center><strong>Email:</strong> <a href="mailto:sagarsssavadatti2004@gmail.com">sagarsssavadatti2004@gmail.com</a></center></p>
-        <p><center><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sagarssavadatti2004" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/sagarssavadatti2004</center></a></p>
-    </section>
+    <section id="contact" class="section container">
+  <h2 class="section-title">Contact</h2>
 
-    <script src="script.js"></script>
+  <div class="card contact-card glow-trail">
+
+      <p>
+        <i class="fas fa-envelope contact-inline-icon"></i>
+        <strong>Email:</strong>
+        <a href="mailto:sagarsssavadatti2004@gmail.com">
+          sagarsssavadatti2004@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <i class="fab fa-linkedin contact-inline-icon"></i>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/sagarssavadatti2004" target="_blank" rel="noopener">
+          linkedin.com/in/sagarssavadatti2004
+        </a>
+      </p>
+
+      <p>
+        <i class="fab fa-github contact-inline-icon"></i>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/sagr12004" target="_blank" rel="noopener">
+          github.com/sagr12004
+        </a>
+      </p>
+
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>©  <span id="year"></span> Sagar S S — Built with HTML, CSS & JS.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
